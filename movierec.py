@@ -8,7 +8,7 @@ tags_df = pd.read_csv('data/tags.csv')
 
 movies_rate_df = movies_df.merge(ratings_df, on='movieId')
 
-movie_title = input('Input your fav movie name (with release year): ')
+movie_title = input('Input your favorite movie name (with release year) (example: John Wick (2014)): ')
 rec_movies = []
 
 movies_db = movies_rate_df[movies_rate_df['title'] == movie_title].sort_values(by='rating', ascending=False)
